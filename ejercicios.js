@@ -9,11 +9,11 @@ function crearUsuario() {
 
       
   }
-  function Usuario(usuario, nombre, email, pass){
-    this.usuario = usuario || "pepito23";
-    this.nombre = nombre || "pepe";
-    this.email = email || "pepito@gmail.com";
-    this.password = pass || "1234";
+  function Usuario(opciones){
+    this.usuario = opciones.usuario || "pepito23";
+    this.nombre = opciones.nombre || "pepe";
+    this.email = opciones.email || "pepito@gmail.com";
+    this.password = opciones.pass || "1234";
 
     this.saludar= function(){
       return "Hola, mi nombre es " + this.nombre
@@ -21,7 +21,7 @@ function crearUsuario() {
 }
 
 
-  var opciones = new Usuario()
+  var opciones = new Usuario({usuario: "emma", nombre: "emmanuel", email: "emma14@gmail.com", pass: "5678"})
   console.log(opciones.saludar())
 
 
@@ -31,6 +31,18 @@ function crearUsuario() {
     // Los datos, son nombre, apellido y dni
     // Tu código:
   }
+
+  function datosPersona(nom, ape, dni){
+    this.nombre = nom || "emmanuel";
+    this.apellido= ape || "Duarte";
+    this.dni = dni || "1234567"
+  }
+
+  var persona1 = new datosPersona("emma", "duar", "548967")
+  var persona2 = new datosPersona("joaquin", "quiroga", "548994267")
+  console.log("Mi nombre es "+ persona1.nombre)
+  console.log("Mi nombre es "+ persona2.nombre)
+
   
   
   function creaObj2() { 
