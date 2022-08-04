@@ -51,7 +51,17 @@ function crearUsuario() {
     // Los datos que deberian mostrarse al acceder a uno de ellos deben ser por deafult, los que ustedes quieran
     // Tu código:
   }
-  
+
+  function Default(){
+    this.nombre = "emmanuel";
+    this.apellido = "Duarte";
+    this.dni = "1234567"
+  }
+  var persona3 = new Default()
+  var persona4 = new Default()
+  console.log("Mi nombre por default es "+ persona3.nombre)
+  console.log("Mi nombre por default es "+ persona4.nombre)
+
   function Computador() { 
     // Deben crear una funcion constructora
     // Los datos son, id, marca, procesador, ram, ssd.
