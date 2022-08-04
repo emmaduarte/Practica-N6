@@ -72,17 +72,29 @@ function crearUsuario() {
   }
 
   function computadora(){
-    this.id = "joaquin";
-    this.marca = "lenovo";
-    this.procesador = "Intel i5";
-    this.ram = "8 GB";
-    this.ssd = "500 GB";
+    this.id = "";
+    this.marca = "";
+    this.procesador = "";
+    this.ram = "";
+    this.ssd = "";
 
-    this.datos = function(){
-      return "Esta Computadora tiene un id"+ this.id + ", marca "+ this.marca+ ", procesador"+this.procesador+", ram"+this.ram+" y ssd"+this.ssd
+    this.datos = function(obj){
+      console.log("Esta Computadora tiene un id: "+ obj.id + ", marca: "+ obj.marca + ", procesador: " + obj.procesador +", ram: " + obj.ram + " y ssd: " + obj.ssd)
     }
 
   }
 
+  function datosPc(perso){
+    perso.id = "joaquin";
+    perso.marca = "lenovo";
+    perso.procesador = "Intel i5";
+    perso.ram = "8 GB";
+    perso.ssd = "500 GB";
+  }
+
   var persona5= new computadora()
-  console.log("Iniciando Pc..."+ setTimeout(persona5.datos(), 3000))
+  datosPc(persona5)
+  console.log("Iniciando Pc...")
+  setTimeout(persona5.datos, 3000, persona5)
+
+
