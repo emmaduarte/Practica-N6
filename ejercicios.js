@@ -70,3 +70,19 @@ function crearUsuario() {
     // Los datos de la computadora deben guardarse dentro de otra variable y mostrar esa persona para ver los datos.
     // Tu código:
   }
+
+  function computadora(){
+    this.id = "joaquin";
+    this.marca = "lenovo";
+    this.procesador = "Intel i5";
+    this.ram = "8 GB";
+    this.ssd = "500 GB";
+
+    this.datos = function(){
+      return "Esta Computadora tiene un id"+ this.id + ", marca "+ this.marca+ ", procesador"+this.procesador+", ram"+this.ram+" y ssd"+this.ssd
+    }
+
+  }
+
+  var persona5= new computadora()
+  console.log("Iniciando Pc..."+ setTimeout(persona5.datos(), 3000))
