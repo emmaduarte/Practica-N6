@@ -6,8 +6,23 @@ function crearUsuario() {
     // {{nombre}} debe ser el nombre definido en cada instancia
     // Devuelve la clase
     // Tu código:
-  
+
+      
   }
+  function Usuario(usuario, nombre, email, pass){
+    this.usuario = usuario || "pepito23";
+    this.nombre = nombre || "pepe";
+    this.email = email || "pepito@gmail.com";
+    this.password = pass || "1234";
+
+    this.saludar= function(){
+      return "Hola, mi nombre es " + this.nombre
+    }
+}
+
+
+  var opciones = new Usuario()
+  console.log(opciones.saludar())
 
 
 
