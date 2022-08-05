@@ -71,30 +71,34 @@ function crearUsuario() {
     // Tu código:
   }
 
-  function computadora(){
-    this.id = "";
-    this.marca = "";
-    this.procesador = "";
-    this.ram = "";
-    this.ssd = "";
+  function computadora(id, marca, procesador, ram, ssd){
+    this.id = id;
+    this.marca = marca;
+    this.procesador = procesador;
+    this.ram = ram;
+    this.ssd = ssd;
 
-    this.datos = function(obj){
-      console.log("Esta Computadora tiene un id: "+ obj.id + ", marca: "+ obj.marca + ", procesador: " + obj.procesador +", ram: " + obj.ram + " y ssd: " + obj.ssd)
+    this.datos = function(){
+      //console.log("Esta Computadora tiene un id: "+ id + ", marca: "+ marca + ", procesador: " + procesador +", ram: " + ram + " y ssd: " + ssd)
+      //Otra manera es esta
+      console.log(` Esta computadora tiene
+      id : ${id}
+      marca: ${marca}
+      procesador: ${procesador} 
+      Ram: ${ram} GB 
+      SSD: ${ssd} GB 
+      ` )
     }
 
   }
 
-  function datosPc(perso){
-    perso.id = "joaquin";
-    perso.marca = "lenovo";
-    perso.procesador = "Intel i5";
-    perso.ram = "8 GB";
-    perso.ssd = "500 GB";
+  function ejecucion(datosPc){
+    console.log("Iniciando Pc...")
+    setTimeout(datosPc.datos, 2000)
   }
 
-  var persona5= new computadora()
-  datosPc(persona5)
-  console.log("Iniciando Pc...")
-  setTimeout(persona5.datos, 3000, persona5)
+  var persona5= new computadora("joaquin", "lenovo", "Intel i5", "8", "500")
+  ejecucion(persona5)
+  
 
 
